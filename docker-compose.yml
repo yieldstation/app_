@@ -1,8 +1,28 @@
 version: "3"
+
+volumes:
+  postgres:
+
 services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    user: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      TZ: "Asia/Tokyo"
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
   app:
     build: ./docker/php
     container_name: app
+    depends_on:
+      - postgres
     volumes:
       - ./backend:/work
 
