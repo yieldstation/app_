@@ -17,6 +17,7 @@ services:
       - 5432:5432
     volumes:
       - postgres:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
 
   app:
     build: ./docker/php
