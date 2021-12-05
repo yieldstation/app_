@@ -1,5 +1,6 @@
 <?php
 
+// use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('welcome');
+    // $events = Event::all();
+
+    // return view('events', [
+    //     'events' => $events
+    // ]);
 });
+
+// Route::get('/events/{event}', function ($id) {
+//     $event = Event::findOrFail($id);
+
+//     return view('event', [
+//         'events' => $event
+//     ]);
+// });
