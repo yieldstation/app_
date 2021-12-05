@@ -28,6 +28,6 @@ Route::get('/events/{event}', function ($id) {
     $event = Event::findOrFail($id);
 
     return view('event', [
-        'events' => $event
+        'event' => $event
     ]);
 });
