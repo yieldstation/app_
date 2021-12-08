@@ -17,6 +17,15 @@ composer install
 ```
 
 ```
+composer require --dev barryvdh/laravel-ide-helper
+php artisan ide-helper:model --nowrite
+```
+
+```
+composer require laravelcollective/html
+```
+
+```
 chmod 777 -R storage/
 ```
 
