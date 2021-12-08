@@ -24,6 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/events/create', function () {
+    return view('event.create');
+});
+
 Route::get('/events/{event}', function ($id) {
     $event = Event::findOrFail($id);
 
