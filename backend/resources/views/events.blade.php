@@ -1,16 +1,26 @@
 <x-layout>
-   @foreach($events as $event)
-       <article>
-           <h1>
-               <a href="/events/{{ $event->id}}" >
-                   {{ $event->title }}
-               </a>
-           </h1>
+    <table class="table table-striped table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th scope="col"">title</th>
+                <th scope="col"">start time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($events as $event)
+            <tr>
+                <a href="/events/{{ $event->id}}" >
+                <td>
+                        {{ $event->title }}
+                    </a>
+                </td>
+                <td>
+                    {{ $event->start_time }}
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 
-           <div>
-               {{ $event->start_time }}
-           </div>
-       </article>
-   @endforeach
     {{ link_to_route('events.create', '新規登録', null, ['class' => 'btn btn-primary mb-3']) }}
 </x-layout>
