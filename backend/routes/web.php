@@ -14,24 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'App\Http\Controllers\EventController@index');
 
-    // return view('welcome');
-    $events = Event::all();
-
-    return view('events', [
-        'events' => $events
-    ]);
-});
-
-Route::get('/events/create', function () {
-    return view('event.create');
-});
-
-Route::get('/events/{event}', function ($id) {
-    $event = Event::findOrFail($id);
-
-    return view('event', [
-        'event' => $event
-    ]);
-});
+Route::resource('events', 'App\Http\Controllers\EventController');
