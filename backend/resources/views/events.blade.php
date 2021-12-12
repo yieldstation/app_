@@ -22,5 +22,5 @@
         </tbody>
     </table>
 
-    {{ link_to_route('events.create', '新規登録', null, ['class' => 'btn btn-primary mb-3']) }}
+    {{ link_to_action('App\Http\Controllers\EventController@create', $title = '新規登録', $parameter = null, $attributes = ['class' => 'btn btn-primary mb-3']) }}
 </x-layout>
