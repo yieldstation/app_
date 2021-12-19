@@ -6,9 +6,16 @@ git clone後 以下の処理を行うことで、http://localhost:8080 でLarave
 sudo docker-compose up -d
 ```
 
+拡張機能「Remote -Containers」をインストールする。
+
+vscode画面左下の「><」のマークから、「Attach to Running Container」を選択。
+「app」コンテナに接続する。
+
+
 以下は、clone後の初回のみ。
 
 ```
+※Remote Containersをインストールしない場合は、自分でコンテナにアタッチする必要がある。
 sudo docker-compose exec app bash
 ```
 
