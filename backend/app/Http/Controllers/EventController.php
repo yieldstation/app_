@@ -39,6 +39,14 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        $event = new Event();
+        $event->title = $request->title;
+        $event->start_time = $request->start_time;
+        $event->end_time = $request->end_time;
+
+        $event->save();
+
+        return redirect()->action('App\Http\Controllers\EventController@index');
     }
 
     /**

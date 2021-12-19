@@ -9,13 +9,16 @@
         <tbody>
             @foreach($events as $event)
             <tr>
-                <a href="/events/{{ $event->id}}" >
                 <td>
+                    <a href="/events/{{ $event->id}}" >
                         {{ $event->title }}
                     </a>
                 </td>
                 <td>
                     {{ $event->start_time }}
+                </td>
+                <td>
+                    {{ $event->end_time }}
                 </td>
             </tr>
             @endforeach
