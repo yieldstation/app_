@@ -3,14 +3,14 @@
         <thead>
             <tr>
                 <th scope="col"">title</th>
-                <th scope="col"">start time</th>
+                <th scope=" col"">start time</th>
             </tr>
         </thead>
         <tbody>
             @foreach($events as $event)
             <tr>
                 <td>
-                    <a href="/events/{{ $event->id}}" >
+                    <a href="/events/{{ $event->id}}">
                         {{ $event->title }}
                     </a>
                 </td>
