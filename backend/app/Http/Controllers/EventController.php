@@ -15,20 +15,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-
-        return view('events', [
-            'events' => $events
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('event.create');
+        return $events->toJson();
     }
 
     /**
@@ -46,7 +33,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect()->action('App\Http\Controllers\EventController@index');
+        return response()->json(['name' => 'john']);
     }
 
     /**
@@ -58,21 +45,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-
-        return view('event', [
-            'event' => $event
-        ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return $event->toJson();
     }
 
     /**
@@ -95,6 +68,7 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Event::find($id)->delete();
+        return response()->json(['name' => 'john']);
     }
 }
