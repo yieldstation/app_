@@ -37,3 +37,15 @@ services:
       - ./backend:/work
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     working_dir: /work
+
+  vue:
+    container_name: vue
+    build: ./docker/node
+    working_dir: /workspace
+    volumes:
+      - ./frontend/vue-cli-ui:/root/.vue-cli-ui
+      - ./frontend/workspace:/workspace
+    ports:
+      - "8000:8000"
+      - "8081-8089:8081-8089"
+    command: "vue ui --host=0.0.0.0 --port=8000"
