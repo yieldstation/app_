@@ -57,7 +57,14 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $event = Event::findOrFail($id);
+        $event->title = $request->title;
+        $event->start_time = $request->start_time;
+        $event->end_time = $request->end_time;
+
+        $event->update();
+
+        return response()->json(['name' => 'john']);
     }
 
     /**
