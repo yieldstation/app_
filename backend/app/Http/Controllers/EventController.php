@@ -15,7 +15,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return $events->toJson();
+        return response()->json($events);
     }
 
     /**
@@ -33,7 +33,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return response()->json(['name' => 'john']);
+        return response()->json(Event::all());
     }
 
     /**
@@ -45,7 +45,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-        return $event->toJson();
+        return response()->json($event);
     }
 
     /**
@@ -64,7 +64,7 @@ class EventController extends Controller
 
         $event->update();
 
-        return response()->json(['name' => 'john']);
+        return response()->json($event);
     }
 
     /**
@@ -76,6 +76,6 @@ class EventController extends Controller
     public function destroy($id)
     {
         Event::find($id)->delete();
-        return response()->json(['name' => 'john']);
+        return response()->json(Event::all());
     }
 }
