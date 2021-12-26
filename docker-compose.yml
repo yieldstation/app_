@@ -3,6 +3,7 @@ version: "3"
 volumes:
   postgres:
 
+    null
 services:
   postgres:
     image: postgres:latest
@@ -19,17 +20,17 @@ services:
       - postgres:/var/lib/postgresql/data
       - ./initdb:/docker-entrypoint-initdb.d
 
-  app:
+  api:
     build: ./docker/php
-    container_name: app
+    container_name: api
     depends_on:
       - postgres
     volumes:
       - ./backend:/work
 
-  web:
+  nginx-api:
     image: nginx:1.20-alpine
-    container_name: web
+    container_name: nginx-api
     ports:
       - 8080:80
     volumes:

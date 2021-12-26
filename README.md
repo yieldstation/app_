@@ -9,7 +9,9 @@ sudo docker-compose up -d
 拡張機能「Remote -Containers」をインストールする。
 
 vscode画面左下の「><」のマークから、「Attach to Running Container」を選択。
-「app」コンテナに接続する。
+「api」コンテナに接続する。
+
+「フォルダを開く」から「/work」を開く。
 
 
 以下は、clone後の初回のみ。
