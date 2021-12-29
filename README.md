@@ -27,7 +27,6 @@ composer install
 
 ```
 composer require --dev barryvdh/laravel-ide-helper
-php artisan ide-helper:model --nowrite
 ```
 
 ```
@@ -48,4 +47,8 @@ php artisan key:generate
 
 ```
 php artisan migrate
+```
+
+```
+php artisan ide-helper:model --nowrite
 ```
