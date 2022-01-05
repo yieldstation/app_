@@ -1,6 +1,41 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "hyBu961oHN",
+      "path": "/workspace/my-project",
+      "favorite": 0,
+      "type": "vue",
+      "name": "my-project",
+      "openDate": 1641388449320,
+      "widgets": [
+        {
+          "id": "xWk58y2OVL",
+          "definitionId": "org.vue.widgets.kill-port",
+          "x": 3,
+          "y": 0,
+          "width": 2,
+          "height": 1,
+          "configured": true,
+          "config": null
+        }
+      ]
+    }
+  ],
   "foldersFavorite": [],
-  "tasks": [],
-  "config": {}
+  "tasks": [
+    {
+      "id": "/workspace/my-project:serve",
+      "answers": {
+        "$_overrideArgs": false,
+        "open": false,
+        "mode": "development",
+        "host": "",
+        "port": "8081",
+        "https": false
+      }
+    }
+  ],
+  "config": {
+    "lastOpenProject": "hyBu961oHN"
+  }
 }
