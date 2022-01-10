@@ -2,6 +2,7 @@
     "recommendations": [
         "ms-vscode-remote.remote-containers",
         "ms-vsliveshare.vsliveshare",
-        "bmewburn.vscode-intelephense-client"
+        "bmewburn.vscode-intelephense-client",
+        "hediet.vscode-drawio"
     ]
 }
