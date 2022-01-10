@@ -58,3 +58,7 @@ vscode画面左下の「><」のマークから、「Attach to Running Container
 「api」コンテナに接続する。
 
 「フォルダを開く」から「/workspace」を開く。
+
+```
+npm install axios
+```
