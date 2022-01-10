@@ -1,6 +1,6 @@
 # sample_app
-
-git clone後 以下の処理を行うことで、http://localhost:8080 でLaravelホームページにアクセスできるようになる。
+## WebAPI開発環境
+git clone後 以下の処理を行うことで、http://localhost:8080/api/... でWebAPIが立ち上がる。
 
 ```
 sudo docker-compose up -d
@@ -52,3 +52,9 @@ php artisan migrate
 ```
 php artisan ide-helper:model --nowrite
 ```
+
+## フロントエンド開発環境
+vscode画面左下の「><」のマークから、「Attach to Running Container」を選択。
+「api」コンテナに接続する。
+
+「フォルダを開く」から「/workspace」を開く。
