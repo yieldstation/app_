@@ -60,5 +60,5 @@ vscode画面左下の「><」のマークから、「Attach to Running Container
 「フォルダを開く」から「/workspace」を開く。
 
 ```
-npm install axios
+npm install --save axios vue-axios
 ```
