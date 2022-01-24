@@ -49,3 +49,4 @@ services:
       - "8000:8000"
       - "8081-8089:8081-8089"
     command: "vue ui --host=0.0.0.0 --port=8000"
+    tty: true

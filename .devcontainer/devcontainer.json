@@ -11,7 +11,7 @@
 	],
 	// The 'service' property is the name of the service for the container that VS Code should
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
-	"service": "api",
+	"service": "vue",
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/workspace",
@@ -21,7 +21,7 @@
 	"extensions": [
 		"ms-vsliveshare.vsliveshare",
 		"bmewburn.vscode-intelephense-client"
-	]
+	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
@@ -30,6 +30,7 @@
 	// "shutdownAction": "none",
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+	"postCreateCommand": "apt update && apt install -y wget && wget -O ~/vsls-reqs https://aka.ms/vsls-linux-prereq-script && chmod +x ~/vsls-reqs && ~/vsls-reqs"
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
 }
